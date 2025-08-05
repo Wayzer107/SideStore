@@ -35,16 +35,13 @@ on:
         default: ''
         required: false
         type: string
-    workflow_dispatch:
-
     secrets:
-    #   GITHUB_TOKEN:
-    #     required: true
       CROSS_REPO_PUSH_KEY:
         required: true
       BUILD_LOG_ZIP_PASSWORD:
         required: false
 
+  workflow_dispatch:   # <-- Add this here, not indented
 
 # since build cache, test-build cache, test-run cache are involved, out of order exec if serialization is on individual jobs will wreak all sorts of havoc
 # so we serialize on the entire workflow
