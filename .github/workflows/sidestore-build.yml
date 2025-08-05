@@ -27,6 +27,7 @@ on:
         value: ${{ jobs.build.outputs.marketing-version }}
       release-channel:
         value: ${{ jobs.build.outputs.release-channel }}
+    workflow_dispatch:
           
 jobs:
   build:
